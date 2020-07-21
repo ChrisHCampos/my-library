@@ -6,8 +6,8 @@ exports.up = function(knex) {
     table.string('genero').notNullable();
     table.string('numeroSerie').notNullable();
     table.string('autor').notNullable();
-    table.boolean('status').notNullable();
-    table.boolean('leitura').notNullable();
+    table.string('descricao').notNullable();
+    table.string('status').notNullable();
 
     table.string('id_users').notNullable();
 

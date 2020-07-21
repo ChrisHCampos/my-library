@@ -27,7 +27,7 @@ module.exports = {
     },
 
     async create(request, response) {
-        const { autor, genero, leitura, nomeLivro, numeroSerie, status } = request.body;
+        const { autor, genero, status, nomeLivro, numeroSerie, descricao } = request.body;
         const id_users = request.headers.authorization;
 
         const [id] = await connection('library').insert({
@@ -35,8 +35,8 @@ module.exports = {
             genero,
             numeroSerie,
             autor,
+            descricao,
             status,
-            leitura,
             id_users,
         });
 
